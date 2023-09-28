@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>crud</title>
+</head>
+<body>
+   <div class="menu1">
+    
+        
+    
+    <small class="menu"><i class="fas fa-bars"></i></small>
+   </div>
+    <div class="header  hidden">
+        <div class="image">
+           <!--<img src="image/ali.jpg"> -->
+
+        </div>
+        <ul class="main-menu">
+           <small class="x">&times;</small>
+            <li><small class="main-pro">home</small></li>
+            <li><small>client</small></li>
+            <li><small class="btn-opencrud">crud</small></li>
+            <li><small>employes</small></li>
+            <li><small>sitting</small></li>
+            <li><small>sign out</small> </li>
+        </ul>
+    </div>
+     <div class="musdar">
+        <h1>well come to musdar store</h1>
+        <h2>من نحن </h2>
+        <p>نحن شريكة مسدار العالمية لاستيراد للاجهزة الاكترونيات على مستوى المملكة و العالم</p>
+        <img src="image/ali.jpg" alt="">
+     </div>
+   
+    <div class="crud">
+        <div class="head">
+            <h1>شريكة مسدار و اخوانه للمنتجات البيع</h1>
+            <p>product management system</p>
+        </div>
+
+      <div class="inputs">
+        <input type="text" placeholder="title" id="title">
+
+        <div class="price">
+            <input onkeyup="gettotal()" type="number" placeholder="price" id="price">
+            <input onkeyup="gettotal()" type="number" placeholder="taxes" id="taxes">
+            <input onkeyup="gettotal()" type="number" placeholder="ads" id="ads">
+            <input  onkeyup="gettotal()" type="number" placeholder="discount" id="discount">
+            <small id="total"></small>
+
+        </div>
+        <input type="number" placeholder="count" id="count">
+        <input type="text" placeholder="category" id="category">
+        <button id="submit">create</button>
+      </div> 
+      <div class="outputs">
+
+        <div class="searchblock">
+            <input onkeyup="searchdata(this.value)" type="text" placeholder="search" id="search">
+            <div class="btnsearch">
+                <button onclick="getsearchmood(this.id)" id="searchtitle">search by title</button>
+                <button onclick="getsearchmood(this.id)" id="searchcategory">search by catagory</button>
+            </div>
+
+        </div>
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+                
+
+            </tr>
+            <tbody id="tbody">
+               <!--- <tr>
+                    <td>1</td>
+                    <td>sumsung</td>
+                    <td>2000</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>phone</td>
+                    <td><button id="update">update</button></td>
+                    <td><button id="delete">delete</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>sumsung</td>
+                    <td>2000</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>phone</td>
+                    <td><button id="update">update</button></td>
+                    <td><button id="delete">delete</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>sumsung</td>
+                    <td>2000</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>phone</td>
+                    <td><button id="update">update</button></td>
+                    <td><button id="delete">delete</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>sumsung</td>
+                    <td>2000</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>phone</td>
+                    <td><button id="update">update</button></td>
+                    <td><button id="delete">delete</button></td>
+                </tr> -->
+            </tbody>
+        <div id="deleteall"></div>    
+        </table>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+  <div class="container-wrpper   con-main">
+    <small class="container-x">&times;</small>
+
+   <div class="headerr">
+    <div class="logoo">mus<span>dar</span></div>
+    <ul>
+        <li><a href="" class="active">home</a></li>
+        <li><a href="">produt</a></li>
+        <li><a href="">news</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">contact</a></li>
+
+    </ul>
+   </div>
+    
+   <div class="conteent">
+    <div class="text">
+        <h2>iphone 15 pro max</h2>
+        <p>
+            The iPhone 15 and iPhone 15 Plus are smartphones designed,
+             developed, and marketed by Apple Inc. They are the seventeenth-generation 
+             Pre-orders began on</p>
+              <a href="#">all product</a>
+    </div>
+      <div class="imagess">
+        <img class="img"  src="image/00.jpg" alt="">
+      </div>
+   </div>
+    <div class="icones">
+        <img onclick=" phones (this.src);  colors ('#247ec8') " src="image/00.jpg" alt="">
+        <img onclick=" phones (this.src);  colors ('#000')"  src="image/66.jpg" alt="">
+        <img onclick=" phones (this.src);  colors ('#1e1e1e')" src="image/11.jpg" alt="">
+        <img onclick=" phones (this.src);  colors ('#c79b53')" src="image/22.jpg" alt="">
+        <img onclick=" phones (this.src);  colors ('#c82525')" src="image/33.jpg" alt="">
+        <img onclick=" phones (this.src);  colors ('#033')" src="image/55.jpg" alt="">
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
